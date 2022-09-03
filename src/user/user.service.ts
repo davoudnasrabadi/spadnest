@@ -13,6 +13,7 @@ export class UserService {
         photo_url: data,
       },
     });
+    return updateUser;
   }
 
   async getProfile(id: number) {
