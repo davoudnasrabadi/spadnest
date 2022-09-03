@@ -44,15 +44,4 @@ export class AuthController {
   async login(@Body() dto: LoginDto) {
     return await this.authService.login(dto);
   }
-
-  /**
-   * Get detail User
-   */
-  @UseGuards(JwtAuthGuard)
-  @Get('profile')
-  async profile() {
-    return {
-      message: 'Profile',
-    };
-  }
 }
