@@ -14,7 +14,7 @@ import { UserService } from '../user/user.service';
 @Controller('user')
 export class UserController {
   constructor(private userService: UserService) {}
-  @Post('avatar')
+  @Post('/avatar')
   @UseGuards(JwtAuthGuard)
   @UseInterceptors(
     FileInterceptor('file', {
